@@ -46,7 +46,7 @@ flowchart LR
 A few things I'm quietly pleased with:
 
 - **The bot is the login system.** Reps already live in WhatsApp, so the Java bot that hands out their discount codes is also the identity provider the portal authenticates against. One less system to keep alive.
-- **Skiddle's API doesn't tell you which discount code each order used.** So a Playwright job logs into the promoter portal and reads it, which lets us attribute ~2,900 orders to the rep who sold them and pay people properly.
+- **Skiddle's API doesn't tell you which discount code each order used.** So a Playwright job logs into the promoter portal and reads it, which lets us attribute ~2,900 orders to the rep who sold them.
 - **I've actually restored the backup.** Litestream streams SQLite to R2. I ran the restore drill before I needed it.
 
 <sub>code's private. happy to go through it properly.</sub>
