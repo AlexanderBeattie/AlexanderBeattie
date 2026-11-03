@@ -6,7 +6,7 @@
   <a href="https://khaotic.uk"><code>khaotic.uk</code></a>
 </p>
 
-Final year of Software Engineering at Strathclyde. Spent last year at BAE Systems. Co-founded a Glasgow-based harder styles collective with ties all over the UK on the side, and built the software for it's daily operations.
+Final-year Software Engineering at Strathclyde. A year at BAE Systems. Co-founder of a Glasgow harder styles collective running events across the UK, and the engineer behind the software it runs on.
 
 
 <img src="/github-metrics.svg" alt="GitHub activity" width="100%"/>
