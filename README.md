@@ -32,14 +32,14 @@
 
 ---
 
-## ⚡ Khaotic OS
+## Khaotic OS / Hub
 
-The operations platform behind a UK hard techno promoter. **Solo build, in production 24/7**, replacing spreadsheets as the system of record for ticketing, finance and a **187-rep sales network**.
+The operations platform behind a UK harder styles & techno promoter. **Solo build, in production 24/7**, replacing spreadsheets as the system of record for ticketing, finance and a rep sales network**.
 
 ```mermaid
 flowchart LR
     subgraph Users
-        R[187 reps<br/>WhatsApp]
+        R[200+ reps<br/>WhatsApp]
         O[Operators<br/>PWA]
     end
 
