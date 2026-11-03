@@ -2,7 +2,7 @@
 
 # Alex Beattie
 
-**Software Engineer · Final-year SE @ Strathclyde ·  Industrial Placement, BAE Systems'25-'26 · Co-founder, Khaotic Events**
+**Software Engineer · Final-year SE @ Strathclyde ·  Industrial Placement, BAE Systems '25-'26 · Co-founder, Khaotic Events**
 
 *I build systems that real people depend on, then keep them running.*
 
