@@ -1,104 +1,78 @@
-<div align="center">
+<img src="./banner.svg" alt="Alex Beattie, software engineer" width="100%"/>
 
-# Alex Beattie
+<p>
+  <a href="https://www.linkedin.com/in/alexanderbeattie04/"><code>linkedin</code></a>&nbsp;
+  <a href="mailto:alexbeattie04@gmail.com"><code>email</code></a>&nbsp;
+  <a href="https://khaotic.uk"><code>khaotic.uk</code></a>
+</p>
 
-**Software Engineer · Final-year SE @ Strathclyde ·  Industrial Placement, BAE Systems '25-'26 · Co-founder, Khaotic Events**
+Final year of Software Engineering at Strathclyde. Spent last year at BAE Systems. Co-founded a harder styles music promoter collective in Glasgow on the side, and built the software for it's daily operations.
 
-*I build systems that real people depend on, then keep them running.*
 
-<br/>
+<img src="/github-metrics.svg" alt="GitHub activity" width="100%"/>
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-161b22?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexanderbeattie04/)
-[![Email](https://img.shields.io/badge/EMAIL-161b22?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexbeattie04@gmail.com)
-[![Khaotic](https://img.shields.io/badge/KHAOTIC_EVENTS-161b22?style=for-the-badge&logo=soundcloud&logoColor=white)](https://khaotic.uk)
+&nbsp;
 
-</div>
+### `01` &nbsp;khaotic os
 
----
-
-```text
-> status      final year, graduating May 2027
-> seeking     forward-deployed / client-facing engineering roles, summer 2027
-> placement   BAE Systems, Jun 2025 - Jun 2026, rated "Exceeds Expectations"
-> building    Khaotic OS, in production 24/7
-> location    Glasgow, Scotland
-```
-
-<div align="center">
-
-<img src="/github-metrics.svg" alt="GitHub metrics" width="100%"/>
-
-</div>
-
----
-
-## Khaotic OS / Hub
-
-The operations platform behind a UK harder styles & techno promoter. **Solo build, in production 24/7**, replacing spreadsheets as the system of record for ticketing, finance and a rep sales network**.
+We went from 130-capacity club nights to selling out the O2 Academy Glasgow, and the spreadsheets didn't survive the trip. Khaotic OS is what replaced them. I built it on my own, it runs 24/7, and if it goes down on launch day I hear about it from the other founders and 200 reps at once.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#0A0A0A','primaryColor':'#141414','primaryTextColor':'#F2F2F2','primaryBorderColor':'#FF1F4B','lineColor':'#A8A8A8','secondaryColor':'#0A0A0A','tertiaryColor':'#0A0A0A','clusterBkg':'#0F0F0F','clusterBorder':'#3a3a3a','edgeLabelBackground':'#0A0A0A','fontFamily':'monospace'}}}%%
 flowchart LR
-    subgraph Users
-        R[200+ reps<br/>WhatsApp]
-        O[Operators<br/>PWA]
+    subgraph users
+        R[reps<br/>whatsapp]
+        O[operators<br/>pwa]
     end
 
-    subgraph VPS["Hetzner VPS · Cloudflare Tunnel · no public ports"]
-        HUB["khaotichub<br/>Node · Express · TypeScript<br/>portal + BFF gateway"]
-        REPS["khaoticreps<br/>Java 21 · Spring Boot<br/>WhatsApp bot + identity provider"]
-        PG[(PostgreSQL)]
-        SQ[(SQLite · WAL)]
-        JOBS["systemd timers<br/>Skiddle sync · code entry bot · backups"]
+    subgraph VPS["hetzner vps · cloudflare tunnel · zero public ports"]
+        HUB["khaotichub<br/>node · express · typescript"]
+        REPS["khaoticreps<br/>java 21 · spring boot"]
+        PG[(postgres)]
+        SQ[(sqlite · wal)]
+        JOBS["systemd timers"]
     end
 
-    R <--> |Twilio| REPS
+    R <--> |twilio| REPS
     O --> HUB
     HUB --> |auth + proxy| REPS
     HUB --> PG
     REPS --> SQ
     JOBS --> PG
-    JOBS --> |Playwright| SK[Skiddle]
-    SQ -.-> |Litestream| R2[(Cloudflare R2)]
+    JOBS --> |playwright| SK[skiddle]
+    SQ -.-> |litestream| R2[(cloudflare r2)]
 ```
 
-| | |
-|---|---|
-| **Rep engine** | Self-serve discount codes, live stats, leaderboards and automated recruitment over WhatsApp |
-| **Attribution** | Skiddle API plus portal automation match ~2,900 orders to individual reps for per-event P&L and payouts |
-| **Ops** | Role-based access across six roles, web push, Litestream replication with a tested restore, nightly backups, pre-deploy checks |
+A few things I'm quietly pleased with:
 
-<sub>Production code is private. Happy to walk through the architecture in an interview.</sub>
+- **The bot is the login system.** Reps already live in WhatsApp, so the Java bot that hands out their discount codes is also the identity provider the portal authenticates against. One less system to keep alive.
+- **Skiddle's API doesn't tell you which discount code each order used.** So a Playwright job logs into the promoter portal and reads it, which lets us attribute ~2,900 orders to the rep who sold them and pay people properly.
+- **I've actually restored the backup.** Litestream streams SQLite to R2. I ran the restore drill before I needed it.
 
----
+<sub>code's private. happy to go through it properly.</sub>
 
-## 🛰️ BAE Systems · Software Engineer, Industrial Placement
+&nbsp;
 
-| Project | What I did | Stack |
-|---|---|---|
-| Full-stack internal platform | Owned the frontend, designed the schema, built the API | Angular, Node.js, PostgreSQL |
-| Distributed cost metrics | Took over a legacy codebase, extended it inside an HLA simulation | Java, REST, HLA |
-| DSEI UK 2025 | Simulation scenarios demonstrated live at the UK's largest defence exhibition | VBS, SQF |
-| 3D interior editor | Self-directed: multi-floor buildings generated from OpenStreetMap data | Godot, C# |
+### `02` &nbsp;industrial placement, bae systems '25-'26
 
-<sub>Placement work was on internal systems, so it doesn't appear on this profile.</sub>
+Year-long placement. Rated *Exceeds Expectations* and assessed as working above placement level.
 
----
+- Built the frontend, schema and API for an internal full-stack platform (Angular, Node, Postgres)
+- Inherited a Java metrics service and got it running inside an HLA distributed simulation
+- Built simulation scenarios in VBS that were shown live at **DSEI 2025**
+- On my own time, a Godot (C#) editor that turns OpenStreetMap data into walkable multi-floor buildings with internal building editor.
 
-<div align="center">
+<sub>all internal, so none of it lives here.</sub>
 
-![Java](https://img.shields.io/badge/Java-161b22?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-161b22?style=flat-square&logo=springboot&logoColor=6DB33F)
-![TypeScript](https://img.shields.io/badge/TypeScript-161b22?style=flat-square&logo=typescript&logoColor=3178C6)
-![Node.js](https://img.shields.io/badge/Node.js-161b22?style=flat-square&logo=nodedotjs&logoColor=339933)
-![Angular](https://img.shields.io/badge/Angular-161b22?style=flat-square&logo=angular&logoColor=DD0031)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161b22?style=flat-square&logo=postgresql&logoColor=4169E1)
-![SQLite](https://img.shields.io/badge/SQLite-161b22?style=flat-square&logo=sqlite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-161b22?style=flat-square&logo=docker&logoColor=2496ED)
-![Linux](https://img.shields.io/badge/Linux-161b22?style=flat-square&logo=linux&logoColor=FCC624)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-161b22?style=flat-square&logo=cloudflare&logoColor=F38020)
-![Playwright](https://img.shields.io/badge/Playwright-161b22?style=flat-square&logo=playwright&logoColor=2EAD33)
-![Godot](https://img.shields.io/badge/Godot-161b22?style=flat-square&logo=godotengine&logoColor=478CBF)
+&nbsp;
 
-<sub>Currently: dissertation on digital twins of commodity supply chains · No-Gi BJJ blue belt · skiing</sub>
+### `03` &nbsp;stack
 
-</div>
+```
+java · spring boot · typescript · node · angular · postgres · sqlite
+docker · linux · systemd · cloudflare · playwright · godot
+```
+
+&nbsp;
+
+<sub>writing a dissertation on digital twins of commodity supply chains. otherwise on a bjj mat or a mountain.</sub>
