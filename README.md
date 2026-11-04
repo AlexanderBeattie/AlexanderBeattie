@@ -15,7 +15,7 @@ Final-year Software Engineering at Strathclyde. A year at BAE Systems. Co-founde
 
 ### `01` &nbsp;khaotic os
 
-We went from 130-capacity club nights to selling out the O2 Academy Glasgow, and the spreadsheets didn't survive the trip. Khaotic OS is what replaced them. I built it on my own, it runs 24/7, and if it goes down on launch day I hear about it from the other founders and 200 reps at once.
+We went from 130-capacity club nights to selling out the O2 Academy Glasgow, and needed the operational capabilities to support this. Khaotic OS was the solution. I built it on my own, it runs 24/7, and if it goes down on launch day I hear about it from the other founders and 200 reps at once.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'background':'#0A0A0A','primaryColor':'#141414','primaryTextColor':'#F2F2F2','primaryBorderColor':'#FF1F4B','lineColor':'#A8A8A8','secondaryColor':'#0A0A0A','tertiaryColor':'#0A0A0A','clusterBkg':'#0F0F0F','clusterBorder':'#3a3a3a','edgeLabelBackground':'#0A0A0A','fontFamily':'monospace'}}}%%
