@@ -75,4 +75,4 @@ docker · linux · systemd · cloudflare · playwright · godot
 
 &nbsp;
 
-<sub>writing a dissertation on digital twins of commodity supply chains. otherwise on a bjj mat or a mountain.</sub>
+<sub>writing a dissertation on digital twins of commodity supply chains. otherwise on a bjj mat.</sub>
