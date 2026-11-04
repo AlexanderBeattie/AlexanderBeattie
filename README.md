@@ -84,8 +84,6 @@ Ongoing experimentation with directing AI coding agents like an engineering team
 
 ### `04` &nbsp;stack
 
-### `03` &nbsp;stack
-
 ```
 java · spring boot · typescript · node · angular · postgres · sqlite
 docker · linux · systemd · cloudflare · playwright · godot
