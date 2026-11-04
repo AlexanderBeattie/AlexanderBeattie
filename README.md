@@ -66,6 +66,24 @@ Year-long placement. Rated *Exceeds Expectations* and assessed as working above 
 
 &nbsp;
 
+&nbsp;
+
+### `03` &nbsp;roblox game dev & luau
+
+Ongoing experimentation with directing AI coding agents like an engineering team, building *VOID INCREMENTAL*, a live Roblox incremental game. Every change is scoped, tested and reviewed before it ships.
+
+- **Agent orchestration:** concurrent sessions with fixed roles: a coordinator that reviews and merges, a systems and balance engineer, a UI engineer, and Antigravity CLI agents working through a queue, each on its own branch. I set priorities, approve designs and decide what ships.
+- **Specs before code:** each batch of work has a written spec with its scope, constraints, the areas it mustn't touch, and a report back. Saves, balance, money and publishing stay my calls.
+- **Guardrails:** nothing merges until the tests, linter and type checker pass. Game logic is kept separate from Roblox services so it can be tested. Save migrations protect live player data, and guard tests protect phone performance.
+- **Data-driven iteration:** analysis of live saves and ad campaigns finds where players drop off, feeding balance hotfixes and weekly content updates.
+- **Systems:** layered prestige loops, persistent progression, badges, codex and leaderboards, and a world generated entirely in code.
+
+<sub>ai as the workforce, me as the lead. private repository.</sub>
+
+&nbsp;
+
+### `04` &nbsp;stack
+
 ### `03` &nbsp;stack
 
 ```
