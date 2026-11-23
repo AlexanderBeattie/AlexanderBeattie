@@ -45,6 +45,7 @@ A few things I'm quietly pleased with:
 - **The bot is the login system.** Reps already live in WhatsApp, so the Java bot that hands out their discount codes is also the identity provider the portal authenticates against. One less system to keep alive.
 - **Skiddle's API doesn't tell you which discount code each order used.** So a Playwright job logs into the promoter portal and reads it, which lets us attribute ~2,900 orders to the rep who sold them.
 - **I've actually restored the backup.** Litestream streams SQLite to R2. I ran the restore drill before I needed it.
+
 <sub>code's private. happy to go through it properly.</sub>
  
 &nbsp;
@@ -57,6 +58,7 @@ Year-long placement. Rated *Exceeds Expectations* and assessed as working above 
 - Inherited a Java metrics service and got it running inside an HLA distributed simulation
 - Built simulation scenarios in VBS that were shown live at **DSEI 2025**
 - A stretch project: a Godot (C#) editor that turns OpenStreetMap data into walkable multi-floor buildings, with an internal building editor
+
 <sub>all internal, so none of it lives here.</sub>
  
 &nbsp;
@@ -72,6 +74,7 @@ Ongoing experimentation with directing AI coding agents like an engineering team
 - **Guardrails:** nothing merges until the tests, linter and type checker pass. Game logic is kept separate from Roblox services so it can be tested. Save migrations protect live player data, and guard tests protect phone performance.
 - **Data-driven iteration:** analysis of live saves and ad campaigns finds where players drop off, feeding balance hotfixes and weekly content updates.
 - **Systems:** layered prestige loops, persistent progression, badges, codex and leaderboards, and a world generated entirely in code.
+
 <sub>ai as the workforce, me as the lead. private repository.</sub>
  
 &nbsp;
